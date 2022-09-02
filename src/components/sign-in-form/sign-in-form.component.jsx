@@ -36,7 +36,7 @@ const SignInForm = () => {
   };
 
   const signInWithGoogle = async () => {
-    await signInWithGooglePopup();
+    await signInWithGooglePopup().then(SuccessfulSignInHandler);
   };
 
   const handleSubmit = async (event) => {
