@@ -35,10 +35,8 @@ const userReducer = (state, action) => {
 };
 
 export const UserContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(userReducer, INITIAL_STATE);
+  const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
   //2 args for useReucer: first is reducer to use, second is initial value of state
-
-  const { currentUser } = state;
 
   const setCurrentUser = (user) => {
     dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
