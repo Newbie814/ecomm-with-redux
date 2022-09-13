@@ -9,8 +9,6 @@ import App from './App';
 
 // import { UserContextProvider } from './contexts/user.context';
 
-import { CartProvider } from './contexts/cart.context';
-
 import reportWebVitals from './reportWebVitals';
 
 import './index.scss';
@@ -22,9 +20,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <CartProvider>
-          <App />
-        </CartProvider>
+        <App />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
